@@ -16,6 +16,4 @@ y=nextTerm;
 return false;
 
 	}
-	
-
 }
