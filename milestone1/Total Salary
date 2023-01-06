@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int basic=s.nextInt();
+		String grade=s.next();
+		char ch=grade.charAt(0);
+
+
+		double hra=20.0*basic/100;
+		double da=50.0*basic/100;
+		double pf=11.0*basic/100;
+		
+		int allow;
+		if(ch=='A')
+		allow=1700;
+		else if(ch=='B')
+		allow=1500;
+		else
+		allow=1300;
+
+
+double ans=basic+hra+da+allow-pf;
+System.out.print(Math.round(ans));
+// double x=ans-(int)ans;
+// if(x<.5)
+// System.out.print((int)ans);
+// else
+// System.out.print((int)ans +1);
+
+
+	}
+}
