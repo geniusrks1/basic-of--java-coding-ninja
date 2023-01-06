@@ -1,0 +1,16 @@
+public class Solution {
+    public static void trianglePattern(int n) {
+     
+	int i=0;
+	while(i<n){
+		int j=0;
+while(j<=i){
+	System.out.print(n-j+" ");
+	j++;
+}
+
+System.out.println();
+i++;
+	}
+    }
+}
