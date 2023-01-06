@@ -1,0 +1,17 @@
+
+import java.util.Scanner;
+public class Solution {
+    
+    public static void main(String[] args) {
+     Scanner s=new Scanner(System.in);
+     int x=s.nextInt();
+     int n=s.nextInt();
+
+    int power=1;
+    while(n--!=0){
+        power=power*x;
+    }
+    System.out.print(power);
+        
+    }
+}
