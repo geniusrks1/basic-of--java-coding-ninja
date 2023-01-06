@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+	Scanner s=new Scanner(System.in);
+	int dec=s.nextInt();
+	if(dec==0){
+		System.out.print(0);
+		return ;
+	}
+
+	
+String binary="";
+while(dec!=0){
+binary=dec%2+binary ;
+dec/=2;
+}
+System.out.print(binary);
+
+
+	}
+}
