@@ -1,0 +1,105 @@
+public class Solution {
+
+//	public static void spiralPrint(int matrix[][]){
+// 		if(a.length==0){
+//             return;
+//         }
+//          int i, k = 0, l = 0;
+  
+//         /*  k - starting row index
+//         m - ending row index
+//         l - starting column index
+//         n - ending column index
+//         i - iterator
+//         */
+//   int n=a[0].length;
+//         int m=a.length;
+        
+//         while (k < m && l < n) {
+	
+//             // Print the first row from the remaining rows
+//             for (i = l; i < n; ++i) {
+//                 System.out.print(a[k][i] + " ");
+//             }
+//             k++;
+  
+//             // Print the last column from the remaining
+//             // columns
+//             for (i = k; i < m; ++i) {
+//                 System.out.print(a[i][n - 1] + " ");
+//             }
+//             n--;
+  
+//             // Print the last row from the remaining rows */
+//             if (k < m) {
+//                 for (i = n - 1; i >= l; --i) {
+//                     System.out.print(a[m - 1][i] + " ");
+//                 }
+//                 m--;
+//             }
+  
+//             // Print the first column from the remaining
+//             // columns */
+//             if (l < n) {
+//                 for (i = m - 1; i >= k; --i) {
+//                     System.out.print(a[i][l] + " ");
+//                 }
+//                 l++;
+//             }
+//         }
+//     }
+//     }
+
+ public static void spiralPrint(int matrix[][]){
+		//Your code goes here
+		int row=matrix.length;
+		if(row<=0)
+		{
+			return;
+		}
+		int col=matrix[0].length;
+		
+		int a=0,b=matrix[0].length-1,c=matrix[0].length-1,d=0;
+		//int i,j,k,l;
+		int noe=row*col;
+		int count=0;
+		int rowstart=0;
+		int colstart=0;
+		while(count!=noe)
+		{
+			for(int i=colstart;count<noe&&i<col;i++)
+			{
+				System.out.print(matrix[rowstart][i]+" ");
+				count++;
+			}
+			rowstart++;
+
+		
+
+			for(int i=rowstart;i<noe&& i<row;i++)
+			{
+				System.out.print(matrix[i][col-1]+" ");
+				count++;
+			}
+			col--;
+
+			
+
+			for(int i=col-1; count<noe&&i>=colstart;i--)
+			{
+				System.out.print(matrix[row-1][i]+" ");
+				count++;
+			}
+		row--;
+
+			
+
+			for(int i=row-1;count<noe &&i>=rowstart;i--)
+			{
+				System.out.print(matrix[i][colstart]+" ");
+				count++;
+			}
+		colstart++;;
+		}
+	}
+}
