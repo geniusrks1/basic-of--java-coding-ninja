@@ -1,0 +1,67 @@
+import java.util.Scanner;
+public class Solution {
+
+
+	public static void main(String[] args) {
+		
+	Scanner s=new Scanner(System.in);
+	int n=s.nextInt();
+	int i=0;
+
+    int n1=(n+1)/2;
+	while(i<n1){
+
+int space=0;
+while(space<n1-1-i){
+	System.out.print(' ');
+	space++;
+}
+
+		int j=0;
+while(j<=i){
+	System.out.print('*');
+	j++;
+}
+
+	int j2=0;
+while(j2<i){
+	System.out.print('*');
+	j2++;
+}
+
+System.out.println();
+i++;
+	}
+
+      i=0;
+ int n2=n-n1;
+	while(i<n2){
+
+int space=0;
+while(space<=i){
+	System.out.print(' ');
+	space++;
+}
+
+		int j=0;
+while(j<n2-i){
+	System.out.print('*');
+	j++;
+}
+
+	int j2=0;
+while(j2<n2-i-1){
+	System.out.print('*');
+	j2++;
+}
+
+System.out.println();
+i++;
+	}
+
+
+
+		
+	}
+
+}
