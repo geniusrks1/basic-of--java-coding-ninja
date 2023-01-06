@@ -1,0 +1,19 @@
+public class Solution {
+	public static String reverseWordWise(String input) {
+String ans="";
+
+
+int n=input.length();
+String word="";
+for(int i=0;i<n;i++){
+if(input.charAt(i)!=' ')
+  word+=input.charAt(i);
+
+else{
+	ans=word+" "+ans;
+	word="";
+}}
+ans=word+" "+ans;
+return  ans;
+	}
+}
