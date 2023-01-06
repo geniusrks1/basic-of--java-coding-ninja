@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Solution {
+
+
+	public static void main(String[] args) {
+		
+	Scanner s=new Scanner(System.in);
+	int n=s.nextInt();
+	int i=0;
+	while(i<n){
+
+int space=0;
+while(space<n-1-i){
+	System.out.print(' ');
+	space++;
+}
+
+		int j=0;
+while(j<=i){
+	System.out.print('*');
+	j++;
+}
+
+
+	int j2=0;
+while(j2<i){
+	System.out.print('*');
+	j2++;
+}
+
+System.out.println();
+i++;
+	}
+
+		
+	}
+
+}
