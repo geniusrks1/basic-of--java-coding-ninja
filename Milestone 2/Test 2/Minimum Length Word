@@ -1,0 +1,33 @@
+public class Solution {
+	
+	public static String minLengthWord(String input){
+		int n=input.length();
+		int min=Integer.MAX_VALUE;
+		String word="";
+		int word_l=0;
+		String ans="";
+
+		for(int i=0;i<n;i++){
+			if(input.charAt(i)!=' '){
+				word+=input.charAt(i);
+				word_l++;
+			}
+			else{
+				if(word_l<min){
+					min=word_l;
+					ans=word;
+				}
+				word_l=0;
+				word="";
+			}
+		}
+
+		       if(word_l<min){
+					min=word_l;
+					ans=word;
+				}
+
+		return ans;
+
+	}
+}
