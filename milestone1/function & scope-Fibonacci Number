@@ -1,0 +1,23 @@
+public class Solution {
+	
+	public static boolean checkMember(int n){
+        
+        if(n==0||n==1)
+            return true;
+		int term=0;		
+        int term1=0;
+        int term2=1;
+		while(term<=n){
+            term=term1+term2;
+            if(term==n)
+            return true;
+            term1=term2;
+            term2=term;
+            
+        }
+        return false;
+
+	}
+	
+
+}
