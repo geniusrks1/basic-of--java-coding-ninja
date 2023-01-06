@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Solution {
+
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+	int n=s.nextInt();
+	int x=0;
+	int y=1;
+    int nextTerm=1;
+
+	while(n!=0){
+   nextTerm=x+y;
+   x=y;
+   y=nextTerm;
+   n--;
+	}
+
+System.out.print(x);
+		
+	}
+
+}
