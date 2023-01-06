@@ -1,0 +1,14 @@
+public class Solution {
+    public static int[] printColWise(int [][]a) {
+     int n=a.length;
+     int m=a[0].length;
+int arr[]=new int[n*m];
+int k=0;
+for(int i=0;i<m;i++){
+    for(int j=0;j<n;j++){
+        arr[k++]=a[j][i];
+    }
+}
+return arr;
+    }
+}
