@@ -1,0 +1,31 @@
+public class Solution {
+
+	public static void totalSum(int[][] mat) {
+	int n=mat.length;
+    if(n==0){
+        System.out.print(0);
+            return;
+    }
+
+       // sum of 1st and last rows
+        int sum_zr=0;
+        int sum_lr=0;
+        int sum_zc=-mat[0][0]-mat[n-1][0];
+        int sum_lc= -mat[0][n-1]-mat[n-1][n-1];
+        int sum_md=-mat[0][0]-mat[n-1][n-1];
+        int sum_rd= -mat[0][n-1]-mat[n-1][0];
+        for(int i=0;i<n;i++){
+            sum_zr+=mat[0][i];
+            sum_lr+=mat[n-1][i];
+            sum_zc+=mat[i][0];
+            sum_lc+=mat[i][n-1];    
+            sum_rd+=mat[i][n-i-1];
+            sum_md+=mat[i][i];
+        }
+        if(n%2==0)
+        System.out.print(sum_zr+sum_lr+sum_lc+sum_zc+sum_md+sum_rd);
+        else
+         System.out.print(sum_zr+sum_lr+sum_lc+sum_zc+sum_md+sum_rd-mat[(n-1)/2][(n-1)/2]);   
+        
+    }
+}
