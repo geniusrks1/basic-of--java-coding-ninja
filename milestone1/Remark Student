@@ -1,0 +1,12 @@
+public class Solution {
+    public static String remarkStudent(int score) {
+        // Write your code here
+        if(score>75)
+        return "Distinction";
+
+        if(score<50)
+        return "Below Average";
+
+        return "Average";
+    }
+}
