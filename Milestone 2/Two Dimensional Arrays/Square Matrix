@@ -1,0 +1,23 @@
+import javafx.util.Pair;
+public class Solution {
+    public static Pair< String, int[] > sqrMat(int [][]mat, int n, int m) {
+        
+       
+   if(n==m){
+ 
+int k=0;
+int diag_sum=0;
+int arr[]=new int[m];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            if(i==j)
+         arr[k++]=mat[i][j];
+        }
+    }
+
+return new Pair("YES",arr);
+    }
+
+int arr[]=new int[0];
+    return new Pair("NO",arr);
+}}
