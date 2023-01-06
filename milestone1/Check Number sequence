@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int pre = s.nextInt();
+		boolean isDec = true;
+		
+      
+		
+		for(int i=1;i<n;i++) {  
+			int current = s.nextInt();						
+            
+			if(pre == current) {
+               System.out.print("false");
+               return;
+            }
+               
+		else if(pre>current) {
+                
+				if(isDec) 
+					pre = current;
+				else{
+                    System.out.print("false");
+                    return;
+                 
+                }}
+            
+            
+         else {    //   if(pre<current)
+				isDec = false;
+				pre = current;
+                  
+            }}
+        
+		
+		 	System.out.print("true");
+		
+		
+	}
+}
