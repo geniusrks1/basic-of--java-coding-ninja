@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int i=0;
+		while(i<n){
+
+int j1=0;
+int p=2*i+1;
+while(j1<n-i){
+	System.out.print(p);
+	p+=2;
+	j1++;
+}
+int j2=0;
+int x=1;
+while(j2<i){
+	System.out.print(x);
+	x+=2;
+	j2++;
+}
+
+
+			System.out.println();
+			i++;
+		}
+	}
+}
