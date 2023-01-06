@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+int sum_even=0,sum_odd=0;
+while(n!=0){
+	int last_digit=n%10;
+	if(last_digit%2==0)
+	sum_even+=last_digit;
+	else
+	sum_odd+=last_digit;
+	n/=10;
+}
+
+System.out.print(sum_even+" "+sum_odd);
+	}
+}
