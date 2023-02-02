@@ -1,0 +1,31 @@
+import java.util.*;
+public class Solution {
+    public static int[] extraCandies(int n, int x, int []p1, int []p2) {
+        // Write your code here.
+        long ans[]= new long[n];
+       long carry = 0;
+        int k = 0;
+        int i = 0;
+        int j = 0;
+        while(i< n){
+            
+            long sum = p1[i] + p2[j] + carry;
+            if(sum >x){
+                carry = sum - x;
+                ans[k] = x;
+            }
+            else{
+                ans[k] = sum;
+                carry = 0;
+            }
+            k++;
+            i++;
+            j++;
+        }
+
+        for(int z=0;z<n;z++){
+            p1[z]=(int)ans[z];
+        }
+        return p1;
+    }
+}
