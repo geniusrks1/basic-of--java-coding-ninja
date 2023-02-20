@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+	
+		Scanner s = new Scanner(System.in);
+	int n=s.nextInt();
+
+	if(n<=2){
+		System.out.print(true);
+		return;
+	}
+
+int firstTerm=s.nextInt();
+int secondTerm=s.nextInt();
+
+int d=secondTerm-firstTerm;
+
+
+
+		for(int i=3;i<=n;i++){
+			int currTerm=s.nextInt();
+			if((currTerm-secondTerm) !=d){
+			System.out.print(false);
+			return;
+			}
+			secondTerm=currTerm;
+		}
+
+		System.out.print(true);
+	}
+}
