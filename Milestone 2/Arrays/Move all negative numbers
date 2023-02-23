@@ -28,3 +28,87 @@ public class Solution {
      return nums;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///
+
+
+import java.util.* ;
+import java.io.*; 
+public class Solution {
+  
+public static void main(String[]args){
+        Scanner s=new Scanner(System.in);
+        int t=s.nextInt();
+        while(t-->0){
+                int n=s.nextInt();
+                int arr[]=new int[n];
+
+                for(int i=0;i<n;i++)
+                arr[i]=s.nextInt();
+
+int temp[]=arr;
+int temp2[]=separateNegativeAndPositive(arr);
+for(int i=0;i<n;i++){
+        if(temp[i]!=temp2[i])
+        System.out.println("No");
+}
+System.out.println("Yes");
+
+                
+        }
+}
+
+
+
+
+public static int [] separateNegativeAndPositive(int [] nums) {
+      
+       int n=nums.length;
+
+
+       int i=0,j=n-1,k;
+     while(i<=j){
+     if(nums[i]<0 && nums[j]>0 ){
+        i++;
+     j--;
+     } 
+     else if(nums[i]>0 && nums[j]<0){
+int temp=nums[i];
+nums[i]=nums[j];
+nums[j]=temp;
+         i++;
+         j--;
+     }
+     else if(nums[i]<0 && nums[j]<0){
+        i++;
+     } 
+     else{
+        j--;
+     }
+
+     }
+   
+    return nums;
+}
+
+
+    
+
+
+
+
+
+}
